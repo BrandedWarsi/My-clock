@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>For Zainab ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{width:100%;height:100%;height:100dvh;overflow:hidden;font-family:'Segoe UI',Georgia,serif;background:#0a0014;color:#fff}
+#bg{position:fixed;inset:0;background:radial-gradient(ellipse at 20% 30%,#2d0a35 0%,transparent 60%),radial-gradient(ellipse at 80% 70%,#1a0a2e 0%,transparent 60%),linear-gradient(180deg,#0a0014 0%,#1a0510 40%,#0f0218 100%);z-index:0}
+.star{position:fixed;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.6;animation:twinkle 3s infinite}
+@keyframes twinkle{0%,100%{opacity:.2}50%{opacity:1}}
+.particle{position:fixed;width:3px;height:3px;background:radial-gradient(circle,#ff69b4,transparent);border-radius:50%;pointer-events:none;animation:floatUp 8s linear infinite}
+@keyframes floatUp{0%{transform:translateY(100vh) scale(0);opacity:0}20%{opacity:.8}100%{transform:translateY(-10vh) scale(1);opacity:0}}
+.heart{position:fixed;color:#ff6b9d;font-size:16px;pointer-events:none;animation:heartFloat 6s ease-in infinite;opacity:.7}
+@keyframes heartFloat{0%{transform:translateY(100vh) scale(.5) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-10vh) scale(1.2) rotate(20deg);opacity:0}}
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10;opacity:0;pointer-events:none;transition:opacity 1.2s ease; padding:20px}
+.screen.active{opacity:1;pointer-events:auto}
+.top-text{font-size:clamp(1.1rem,4vw,1.6rem);color:#ffb6c1;text-align:center;text-shadow:0 0 20px rgba(255,182,193,.4);margin-bottom:8px;letter-spacing:1px;animation:fadeInDown 1s ease}
+.sub-text{font-size:clamp(.9rem,3vw,1.1rem);color:#dda0dd;text-align:center;margin-bottom:30px;opacity:.9;animation:fadeInDown 1s .3s both}
+.timer-container{display:flex;align-items:center;justify-content:center;gap:8px;margin:20px 0;flex-wrap:wrap;animation:fadeInUp 1s .6s both}
+.glass-card{background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 14px;min-width:70px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.1);transition:transform .3s}
+.num{font-size:clamp(2.2rem,8vw,3.5rem);font-weight:300;color:#fff;text-shadow:0 0 20px rgba(255,182,193,.6),0 0 40px rgba(255,105,180,.3);font-variant-numeric:tabular-nums;line-height:1}
+.label{font-size:.65rem;color:#dda0dd;margin-top:6px;letter-spacing:2px;opacity:.8}
+.colon{font-size:clamp(1.5rem,5vw,2.5rem);color:#ff69b4;text-shadow:0 0 15px rgba(255,105,180,.5);padding-bottom:18px;opacity:.8}
+.bottom-text{font-size:clamp(1rem,3.5vw,1.3rem);color:#ffd700;text-align:center;text-shadow:0 0 15px rgba(255,215,0,.3);margin-top:25px;animation:fadeInUp 1s .9s both}
+.stay-text{font-size:clamp(.8rem,3vw,1rem);color:#ffb6c1;text-align:center;margin-top:15px;opacity:.7;animation:fadeInUp 1s 1.2s both}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+#birthday-screen{background:#0a0014;z-index:20}
+#birthday-content{position:relative;z-index:5;text-align:center;max-width:600px;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100dvh;padding:20px}
+#birthday-title{font-size:clamp(1.8rem,7vw,3.5rem);color:#ffd700;text-shadow:0 0 30px rgba(255,215,0,.5),0 0 60px rgba(255,105,180,.3);margin-bottom:10px;opacity:0;transform:scale(.5);transition:all 1s cubic-bezier(.34,1.56,.64,1)}
+#birthday-title.show{opacity:1;transform:scale(1)}
+#birthday-sub{font-size:clamp(1rem,4vw,1.4rem);color:#ffb6c1;text-shadow:0 0 15px rgba(255,182,193,.3);margin-bottom:30px;opacity:0;transition:opacity 1s .5s}
+#birthday-sub.show{opacity:1}
+#typewriter{font-size:clamp(.85rem,3vw,1.05rem);line-height:1.9;color:#ffe4e1;text-align:center;max-width:500px;min-height:200px;opacity:0;transition:opacity 1s}
+#typewriter.show{opacity:1}
+#typewriter .cursor{border-right:2px solid #ff69b4;animation:blink 1s infinite}
+@keyframes blink{0%,100%{border-color:#ff69b4}50%{border-color:transparent}}
+#final-heart{font-size:4rem;margin:25px 0;opacity:0;transform:scale(0);transition:all .8s cubic-bezier(.34,1.56,.64,1);filter:drop-shadow(0 0 20px #ff69b4)}
+#final-heart.show{opacity:1;transform:scale(1);animation:pulseHeart 2s infinite}
+@keyframes pulseHeart{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+#made-for{font-size:.9rem;color:#dda0dd;margin-top:10px;opacity:0;transition:opacity 1s}
+#made-for.show{opacity:.8}
+#surprise-btn{margin-top:25px;padding:14px 40px;background:linear-gradient(135deg,#ff6b9d,#c0392b);color:#fff;border:none;border-radius:30px;font-size:1rem;font-family:inherit;cursor:pointer;box-shadow:0 5px 25px rgba(255,107,157,.4);opacity:0;transform:translateY(20px);transition:all .6s;pointer-events:none}
+#surprise-btn.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#surprise-btn:active{transform:scale(.95)}
+#surprise-screen{background:radial-gradient(ellipse at center,#2d0a35 0%,#0a0014 70%);z-index:30}
+#surprise-text{font-size:clamp(1.5rem,6vw,2.5rem);color:#ffd700;text-shadow:0 0 30px rgba(255,215,0,.4),0 0 60px rgba(255,105,180,.3);text-align:center;opacity:0;transform:scale(.8);transition:all 1.2s cubic-bezier(.34,1.56,.64,1)}
+#surprise-text.show{opacity:1;transform:scale(1)}
+#fireworks{position:fixed;inset:0;z-index:1;pointer-events:none}
+#music-btn{position:fixed;bottom:20px;right:20px;z-index:50;padding:10px 18px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:20px;color:#ffb6c1;font-size:.85rem;font-family:inherit;cursor:pointer;opacity:.7;transition:opacity .3s}
+#music-btn:hover{opacity:1}
+#music-btn.playing{background:rgba(255,107,157,.2);color:#fff}
+@media(max-width:380px){.glass-card{padding:14px 10px;min-width:58px}.num{font-size:1.8rem}.colon{padding-bottom:14px}}
+</style>
+</head>
+<body>
+<div id="bg"></div>
+<div id="stars"></div>
+<div id="hearts"></div>
+<canvas id="fireworks"></canvas>
+
+<div class="screen active" id="countdown-screen">
+<div class="top-text">Something Special Is Coming... ❤️</div>
+<div class="sub-text">Zainab, just wait a little...</div>
+<div class="timer-container">
+<div class="glass-card"><div class="num" id="days">00</div><div class="label">DAYS</div></div>
+<div class="colon">:</div>
+<div class="glass-card"><div class="num" id="hours">00</div><div class="label">HOURS</div></div>
+<div class="colon">:</div>
+<div class="glass-card"><div class="num" id="minutes">00</div><div class="label">MINUTES</div></div>
+<div class="colon">:</div>
+<div class="glass-card"><div class="num" id="seconds">00</div><div class="label">SECONDS</div></div>
+</div>
+<div class="bottom-text">Until your special day begins... 🎂❤️</div>
+<div class="stay-text">Stay here... something beautiful is waiting for you. ✨</div>
+</div>
+
+<div class="screen" id="birthday-screen">
+<div id="birthday-content">
+<div id="birthday-title">HAPPY BIRTHDAY ZAINAB! 🎂❤️</div>
+<div id="birthday-sub">It's finally 15 August! ✨</div>
+<div id="typewriter"></div>
+<div id="final-heart">❤️</div>
+<div id="made-for">Made with ❤️ specially for Zainab</div>
+<button id="surprise-btn">One More Surprise ❤️</button>
+</div>
+</div>
+
+<div class="screen" id="surprise-screen">
+<div id="surprise-text">You are truly special to me. ❤️</div>
+</div>
+
+<button id="music-btn">🎵 Play Music</button>
+
+<script>
+(function(){
+  var targetDate;
+  var timerInterval;
+  var hasTriggered = false;
+  var ac = null;
+  var musicPlaying = false;
+
+  function getTargetDate() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var target = new Date(year, 7, 15, 0, 0, 0);
+    if (now >= target) {
+      target = new Date(year + 1, 7, 15, 0, 0, 0);
+    }
+    return target;
+  }
+
+  function isBirthdayNow() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var target = new Date(year, 7, 15, 0, 0, 0);
+    return now >= target;
+  }
+
+  function updateCountdown() {
+    var now = new Date();
+    var diff = targetDate - now;
+
+    if (diff <= 0 && !hasTriggered) {
+      hasTriggered = true;
+      clearInterval(timerInterval);
+      showBirthday();
+      return;
+    }
+
+    if (diff < 0) diff = 0;
+
+    var d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    var m = Math.floor((diff / (1000 * 60)) % 60);
+    var s = Math.floor((diff / 1000) % 60);
+
+    document.getElementById('days').textContent = d < 10 ? '0' + d : d;
+    document.getElementById('hours').textContent = h < 10 ? '0' + h : h;
+    document.getElementById('minutes').textContent = m < 10 ? '0' + m : m;
+    document.getElementById('seconds').textContent = s < 10 ? '0' + s : s;
+  }
+
+  function showBirthday() {
+    var cs = document.getElementById('countdown-screen');
+    cs.style.opacity = '0';
+    cs.style.pointerEvents = 'none';
+
+    setTimeout(function() {
+      cs.classList.remove('active');
+      var bs = document.getElementById('birthday-screen');
+      bs.classList.add('active');
+      startFireworks();
+      runBirthdaySequence();
+    }, 1200);
+  }
+
+  function runBirthdaySequence() {
+    setTimeout(function() {
+      document.getElementById('birthday-title').classList.add('show');
+    }, 500);
+
+    setTimeout(function() {
+      document.getElementById('birthday-sub').classList.add('show');
+    }, 1500);
+
+    setTimeout(function() {
+      var tw = document.getElementById('typewriter');
+      tw.classList.add('show');
+      typewriterMessage();
+    }, 2500);
+  }
+
+  var message = "Happy Birthday meri pyari Zainab ❤️\n\nFinally woh waqt aa gaya jis ka intezar tha...\n\nAaj tumhara din hai, aur meri sab se pyari wish sirf tumhare liye hai. 🎂❤️\n\nAllah tumhari zindagi ko hamesha khushiyon, sukoon, kamyabi aur mohabbat se bhar de. Tumhari har dua qabool ho aur tumhare chehre ki ye pyari si smile hamesha bani rahe. ✨\n\nTum mere liye bohat special ho, aur main chahta hoon ke tumhara ye birthday tumhari zindagi ke sab se khoobsurat birthdays mein se aik ho.\n\nOnce again...\n\nHappy Birthday, Zainab! ❤️🎂🎉\n\nKeep smiling, keep shining and always stay happy. ❤️";
+
+  function typewriterMessage() {
+    var el = document.getElementById('typewriter');
+    el.innerHTML = '<span class="cursor"></span>';
+    var span = el.querySelector('.cursor');
+    var i = 0;
+    var interval = setInterval(function() {
+      if (i < message.length) {
+        var char = message[i];
+        if (char === '\n') {
+          span.insertAdjacentHTML('beforebegin', '<br>');
+        } else {
+          span.insertAdjacentText('beforebegin', char);
+        }
+        i++;
+        var lc = document.getElementById('birthday-content');
+        if (lc.scrollHeight > lc.clientHeight) {
+          lc.scrollTop = lc.scrollHeight;
+        }
+      } else {
+        clearInterval(interval);
+        span.style.display = 'none';
+        setTimeout(function() {
+          document.getElementById('final-heart').classList.add('show');
+          setTimeout(function() {
+            document.getElementById('made-for').classList.add('show');
+            setTimeout(function() {
+              document.getElementById('surprise-btn').classList.add('show');
+            }, 800);
+          }, 600);
+        }, 400);
+      }
+    }, 40);
+  }
+
+  function createStars() {
+    var container = document.getElementById('stars');
+    for (var i = 0; i < 60; i++) {
+      var s = document.createElement('div');
+      s.className = 'star';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.animationDelay = Math.random() * 3 + 's';
+      s.style.width = (1 + Math.random() * 2) + 'px';
+      s.style.height = s.style.width;
+      container.appendChild(s);
+    }
+  }
+
+  function createHearts() {
+    var container = document.getElementById('hearts');
+    function addHeart() {
+      var h = document.createElement('div');
+      h.className = 'heart';
+      h.textContent = '❤';
+      h.style.left = Math.random() * 100 + '%';
+      h.style.fontSize = (12 + Math.random() * 16) + 'px';
+      h.style.animationDuration = (4 + Math.random() * 4) + 's';
+      h.style.animationDelay = Math.random() * 2 + 's';
+      container.appendChild(h);
+      setTimeout(function() { h.remove(); }, 8000);
+    }
+    for (var i = 0; i < 8; i++) addHeart();
+    setInterval(addHeart, 2000);
+  }
+
+  function createParticles() {
+    var bg = document.getElementById('bg');
+    for (var i = 0; i < 20; i++) {
+      var p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDuration = (6 + Math.random() * 6) + 's';
+      p.style.animationDelay = Math.random() * 5 + 's';
+      bg.appendChild(p);
+    }
+  }
+
+  var canvas = document.getElementById('fireworks');
+  var ctx = canvas.getContext('2d');
+  var fwParticles = [];
+  var fwActive = false;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  function startFireworks() {
+    fwActive = true;
+    launchFirework();
+    setInterval(launchFirework, 1200);
+    animateFireworks();
+  }
+
+  function launchFirework() {
+    var x = Math.random() * canvas.width;
+    var y = canvas.height;
+    var targetY = canvas.height * 0.2 + Math.random() * canvas.height * 0.3;
+    var colors = ['#ff6b9d', '#ffd700', '#ff4500', '#ff69b4', '#00ced1', '#ff8c00', '#da70d6'];
+    var color = colors[Math.floor(Math.random() * colors.length)];
+    fwParticles.push({
+      x: x, y: y, targetY: targetY, vx: 0, vy: -(6 + Math.random() * 4),
+      color: color, life: 1, type: 'rocket', size: 3
+    });
+  }
+
+  function explode(x, y, color) {
+    for (var i = 0; i < 40; i++) {
+      var angle = (Math.PI * 2 * i) / 40;
+      var speed = 2 + Math.random() * 4;
+      fwParticles.push({
+        x: x, y: y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
+        color: color, life: 1, type: 'spark', size: 2 + Math.random() * 2
+      });
+    }
+  }
+
+  function animateFireworks() {
+    if (!fwActive) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (var i = fwParticles.length - 1; i >= 0; i--) {
+      var p = fwParticles[i];
+      if (p.type === 'rocket') {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+        if (p.vy >= 0 || p.y <= p.targetY) {
+          explode(p.x, p.y, p.color);
+          fwParticles.splice(i, 1);
+        }
+      } else {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.08;
+        p.life -= 0.015;
+        p.size *= 0.98;
+        if (p.life > 0 && p.size > 0.3) {
+          ctx.globalAlpha = p.life;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+        } else {
+          fwParticles.splice(i, 1);
+        }
+      }
+    }
+    requestAnimationFrame(animateFireworks);
+  }
+
+  document.getElementById('surprise-btn').addEventListener('click', function() {
+    var bs = document.getElementById('birthday-screen');
+    bs.style.opacity = '0';
+    bs.style.pointerEvents = 'none';
+    setTimeout(function() {
+      bs.classList.remove('active');
+      var ss = document.getElementById('surprise-screen');
+      ss.classList.add('active');
+      setTimeout(function() {
+        document.getElementById('surprise-text').classList.add('show');
+        for (var i = 0; i < 30; i++) {
+          setTimeout(function() {
+            var h = document.createElement('div');
+            h.className = 'heart';
+            h.textContent = '❤';
+            h.style.left = Math.random() * 100 + '%';
+            h.style.fontSize = (20 + Math.random() * 30) + 'px';
+            h.style.animationDuration = (3 + Math.random() * 3) + 's';
+            h.style.color = '#ff6b9d';
+            document.body.appendChild(h);
+            setTimeout(function() { h.remove(); }, 6000);
+          }, i * 150);
+        }
+      }, 300);
+    }, 800);
+  });
+
+  function initAudio() {
+    if (!ac) {
+      var AudioContext = window.AudioContext || window.webkitAudioContext;
+      ac = new AudioContext();
+    }
+  }
+
+  function playNote(freq, duration, delay) {
+    if (!ac) return;
+    var o = ac.createOscillator();
+    var g = ac.createGain();
+    o.connect(g);
+    g.connect(ac.destination);
+    o.type = 'sine';
+    o.frequency.value = freq;
+    var t = ac.currentTime + delay;
+    g.gain.setValueAtTime(0, t);
+    g.gain.linearRampToValueAtTime(0.15, t + 0.05);
+    g.gain.exponentialRampToValueAtTime(0.001, t + duration);
+    o.start(t);
+    o.stop(t + duration);
+  }
+
+  function playMelody() {
+    if (musicPlaying) return;
+    initAudio();
+    musicPlaying = true;
+    document.getElementById('music-btn').classList.add('playing');
+    document.getElementById('music-btn').textContent = '🔊 Playing...';
+
+    var melody = [
+      [523,0.4,0],[659,0.4,0.4],[784,0.4,0.8],[1047,0.6,1.2],
+      [784,0.4,2],[659,0.4,2.4],[523,0.8,2.8],[587,0.4,3.8],
+      [659,0.4,4.2],[784,0.4,4.6],[587,0.6,5],[523,0.8,5.8]
+    ];
+
+    melody.forEach(function(n) {
+      playNote(n[0], n[1], n[2]);
+    });
+
+    setTimeout(function() {
+      musicPlaying = false;
+      document.getElementById('music-btn').classList.remove('playing');
+      document.getElementById('music-btn').textContent = '🎵 Play Music';
+    }, 7000);
+  }
+
+  document.getElementById('music-btn').addEventListener('click', playMelody);
+
+  createStars();
+  createHearts();
+  createParticles();
+
+  targetDate = getTargetDate();
+
+  if (isBirthdayNow()) {
+    hasTriggered = true;
+    document.getElementById('countdown-screen').classList.remove('active');
+    document.getElementById('countdown-screen').style.display = 'none';
+    var bs = document.getElementById('birthday-screen');
+    bs.classList.add('active');
+    startFireworks();
+    runBirthdaySequence();
+  } else {
+    updateCountdown();
+    timerInterval = setInterval(updateCountdown, 1000);
+  }
+})();
+</script>
+</body>
+</html>
